@@ -34,6 +34,7 @@ GEM
     daemons (1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    eventmachine (1.0.7)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     faker (1.4.3)
@@ -101,6 +102,7 @@ DEPENDENCIES
   bcrypt-ruby
   better_errors
   capybara
+  eventmachine
   factory_girl
   faker
   pg

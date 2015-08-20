@@ -21,6 +21,8 @@ gem 'bcrypt-ruby'
 gem 'better_errors'
 gem 'faker'
 
+gem 'eventmachine'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

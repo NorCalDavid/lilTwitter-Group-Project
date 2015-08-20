@@ -1,0 +1,14 @@
+
+
+<!-- new user button takes user to sign up page -->
+<form action="/user/new" method="get">
+  <input type="submit" value="signup">
+</form>
+
+
+<!-- this form is created for current users to login -->
+<form action="user/<%@user.id%>" method="post">
+  <input type="text" name="name">
+  <input type="text" name="password">
+  <input type="submit" value="login">
+</form>

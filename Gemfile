@@ -20,6 +20,8 @@ gem 'shotgun'
 gem 'bcrypt-ruby'
 gem 'better_errors'
 
+gem 'eventmachine'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

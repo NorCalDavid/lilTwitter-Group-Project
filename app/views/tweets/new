@@ -1,4 +1,0 @@
-<form action="users/:user_id/tweets/new" method="post">
-  <label>Input your comment</label>
-  <input type="text" name="comment">
-</form>

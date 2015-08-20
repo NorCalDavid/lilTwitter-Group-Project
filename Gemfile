@@ -20,6 +20,7 @@ gem 'shotgun'
 gem 'bcrypt-ruby'
 gem 'better_errors'
 gem 'faker'
+gem 'test_helper'
 
 group :test do
   gem 'shoulda-matchers'

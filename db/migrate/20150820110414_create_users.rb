@@ -9,8 +9,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :handle
       t.string :password_hash
+      t.timestamps null :false
     end
-
     add_index :users, :email, unique: true
   end
 end

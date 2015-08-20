@@ -1,4 +1,4 @@
-describe "Users" do
+describe 'Users' do
 
   user1 = User.create!(name: 'David Uli',
                        email: 'mail@daviduli.com',

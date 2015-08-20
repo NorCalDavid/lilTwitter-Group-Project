@@ -34,3 +34,4 @@ following = users[0]
 followers = users[1]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+

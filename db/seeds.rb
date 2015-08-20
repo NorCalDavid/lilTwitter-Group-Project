@@ -10,6 +10,7 @@
 
 # Users
 users = []
+
 User.create!(name: 'David Uli',
              email: 'mail@daviduli.com',
              handle: '#NorCalDavid',

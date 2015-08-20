@@ -19,6 +19,7 @@ gem 'rake'
 gem 'shotgun'
 gem 'bcrypt-ruby'
 gem 'better_errors'
+gem 'faker'
 
 gem 'eventmachine'
 
@@ -31,5 +32,4 @@ end
 
 group :test, :development do
   gem 'factory_girl'
-  gem 'faker'
 end

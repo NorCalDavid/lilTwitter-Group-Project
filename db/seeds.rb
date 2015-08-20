@@ -1,0 +1,2 @@
+User.create(name: "kevin")
+

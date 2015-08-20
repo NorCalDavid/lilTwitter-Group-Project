@@ -4,7 +4,8 @@
 
 class CreateFollowers < ActiveRecord::Migration
   def change
-    t.references :user
-
+    create_table :followers do |t|
+      t.references :user_id
+    end
   end
 end

@@ -1,6 +1,6 @@
 <div class="messageDiv">
-  <% if  @tweets %>
-    <%   @tweets.each do |tweet| %>
+  <% if  @allTweets%>
+    <%   @allTweets.each do |tweet| %>
       <p><div class="messageBox"><%=tweet.message %></div></p>
     <%end %>
   <%end %>

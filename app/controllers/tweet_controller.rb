@@ -12,7 +12,7 @@ post '/users/:user_id/tweets/new' do
 
   @user = User.find(params[:user_id])
   @tweet = Tweet.create(message: params[:message], user_id: params[:user_id])
-
+  @allTweets = Tweet.all
   redirect "/users/#{@user.id}"
 end
 

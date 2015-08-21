@@ -4,7 +4,7 @@
 
 get '/' do
   # for signup or login
-  @user = User.new
+  # @user = User.new
   erb :index
 end
 
@@ -18,8 +18,6 @@ post '/users/new' do
   @user.name = params[:name]
   @user.password = params[:password_hash]
 
-  p "*"*100
-p params
   if @user.save
     #helper method
     auth_login(@user)
@@ -42,12 +40,13 @@ end
 post '/users' do
   #if user input = password in db
     @name = params[:name]
-  @user = User.find_by(name: @name)
+    @user_id = params[:id]
+  @user = User.find_by(id: @user_id)
 
   if(@user && @user.password == params[:password_hash])
     auth_login(@user)
     # flash[:message] = 'Thank you for logging in'
-    redirect "/users/#{@user.id}"
+    redirect "/users/#{@user_id}"
   else
     # @form_error = 'Unable to log you in'
     redirect '/'

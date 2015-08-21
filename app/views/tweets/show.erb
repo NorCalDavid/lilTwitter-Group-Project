@@ -1,7 +1,7 @@
 <div class="messageDiv">
   <% if  @all_tweets%>
     <%   @all_tweets.each do |tweet| %>
-      <p><div class="messageBox"><%= tweet %></div></p>
+      <p><div class="messageBox"><%= User.find(tweet.user_id).name %> : <%= tweet.message %></div></p>
     <%end %>
   <%end %>
 </div>

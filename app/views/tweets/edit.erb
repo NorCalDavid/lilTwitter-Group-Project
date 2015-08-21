@@ -4,7 +4,7 @@
   <!-- Edit form -->
     <form action="/users/<%= @user.id %>/tweets/<%=tweet.id%>" method="post">
       <input name="_method" type="hidden" value="PUT">
-      <input type="text" name="message" placeholder=<%= tweet.message %> size="70">
+      <input type="text" size="70" name="message" placeholder=<%=tweet.message%> >
       <input type="submit" value="edit">
     </form>
 

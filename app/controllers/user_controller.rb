@@ -29,8 +29,9 @@ post '/users/new' do
 end
 
 # once you're in
-get '/users/:id' do
-  @user = User.find(params[:id])
+get '/users/:user_id' do
+  @user = User.find(params[:user_id])
+  @tweets = Tweet.where(user_id: params[:user_id])
   erb :'users/show'
 end
 

@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   include BCrypt
 
   has_many :urls
+  has_many :tweets
 
   validates :name, :presence => true, uniqueness: true
 

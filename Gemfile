@@ -14,7 +14,7 @@ gem 'activerecord'
 
 gem 'rake'
 
-gem 'shotgun'
+
 gem 'bcrypt-ruby'
 
 group :test do
@@ -23,4 +23,5 @@ end
 
 group :test, :development do
   gem 'factory_girl'
+  gem 'shotgun'
 end

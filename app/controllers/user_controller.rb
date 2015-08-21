@@ -13,7 +13,7 @@ get '/users/new' do
   erb :'users/new'
  end
 
-post '/users/new' do
+post '/users' do
   @user = User.new
   @user.name = params[:name]
   @user.password = params[:password_hash]

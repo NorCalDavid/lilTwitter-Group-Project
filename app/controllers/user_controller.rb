@@ -8,27 +8,29 @@ get '/' do
   erb :index
 end
 
-get '/user/new' do
+get '/users/new' do
   @user = User.new
-  erb :'users/signup'
+  erb :'users/new'
  end
 
-post '/user/new' do
+post '/users/new' do
   @user = User.new
   @user.name = params[:name]
   @user.password = params[:password]
 
+  p "*"*100
+p params
   if @user.save
     #helper method
     auth_login(@user)
-    redirect "/user/#{ @user.id }"
+    redirect "/users/#{@user.id}"
   else
     @form_error = 'Unable to register'
-    erb :'users/signup'
+    erb :'users/new'
   end
 end
 
-get '/user/:id' do
+get '/users/:id' do
   @user = User.find(params[:id])
-  erb :'user/show'
+  erb :'users/show'
 end

@@ -9,8 +9,8 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 
 
-gem 'activesupport', '~>4.2.0'
-gem 'activerecord', '~>4.2.0'
+gem 'activesupport'
+gem 'activerecord'
 
 gem 'rake'
 
@@ -18,10 +18,7 @@ gem 'shotgun'
 gem 'bcrypt-ruby'
 
 group :test do
-  gem 'shoulda-matchers'
-  gem 'rack-test'
   gem 'rspec'
-  gem 'capybara'
 end
 
 group :test, :development do

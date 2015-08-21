@@ -13,9 +13,9 @@
 	<p class="slogan">"Just like Twitter but better"</p>
 	<!-- This is the login form-->
 	<div class="loginForm col-xs-4">
-		<form action="user/<%@user.id%>" method="post" class="login" >
+		<form action="/users" method="post" class="login" >
   			<input type="text" name="name" class="form-control" placeholder="username" id="ex3"><p>
-  			<input type="password" name="password" class="form-control textarea" placeholder="password"><p>
+  			<input type="password" name="password_hash" class="form-control textarea" placeholder="password"><p>
   			<button type="button" class="btn btn-default signupButton">Register</button>
   			<input type="submit" value="login" class="btn btn-info">
 		</form>
@@ -23,7 +23,7 @@
 
 	<!-- This is the signup form-->
 	<div class="signupForm col-xs-4" id="inner">
-		<form action="/user/new" method="post"><p>
+		<form action="/users/new" method="post"><p>
 			<input type="text" name="name" placeholder="full name" class="form-control"><p>
 			<input type="text" name="handle" placeholder="handler/username" class="form-control"><p>
 			<input type="text" name="email" placeholder="email" class="form-control"><p>

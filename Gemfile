@@ -13,7 +13,6 @@ gem 'activerecord'
 
 gem 'rake'
 gem 'bcrypt'
-gem 'better_errors'
 
 group :test do
   gem 'rspec'
@@ -22,4 +21,5 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'shotgun'
+  gem 'better_errors'
 end

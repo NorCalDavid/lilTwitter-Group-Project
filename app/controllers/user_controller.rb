@@ -47,7 +47,7 @@ post '/users' do
   if(@user && @user.password == params[:password_hash])
     auth_login(@user)
     # flash[:message] = 'Thank you for logging in'
-    redirect "/users/#{@user.id}"
+    redirect "/users/#{@user_id}"
   else
     # @form_error = 'Unable to log you in'
     redirect '/'

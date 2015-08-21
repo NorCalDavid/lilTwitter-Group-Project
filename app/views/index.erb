@@ -1,4 +1,40 @@
+<div class="back">
+</div>
 
+<div class= "container">
+	<hr class="Hline">
+	<p class="title"> FIRETWITTER</p>
+	<hr class="Hline" size="10">
+	<a href="http://imgur.com/u5yxYDv"><img src="http://i.imgur.com/u5yxYDv.gif" title="source: imgur.com" class="logo slideOutUp"/></a>
+	<div class="logsignDiv">
+		<p><p>
+	</div>
+
+	<p class="slogan">"Just like Twitter but better"</p>
+	<!-- This is the login form-->
+	<div class="loginForm col-xs-4">
+		<form action="user/<%@user.id%>" method="post" class="login" >
+  			<input type="text" name="name" class="form-control" placeholder="username" id="ex3"><p>
+  			<input type="password" name="password" class="form-control textarea" placeholder="password"><p>
+  			<button type="button" class="btn btn-default signupButton">Register</button>
+  			<input type="submit" value="login" class="btn btn-info">
+		</form>
+	</div>
+
+	<!-- This is the signup form-->
+	<div class="signupForm col-xs-4" id="inner">
+		<form action="/user/new" method="post"><p>
+			<input type="text" name="name" placeholder="full name" class="form-control"><p>
+			<input type="text" name="handle" placeholder="handler/username" class="form-control"><p>
+			<input type="text" name="email" placeholder="email" class="form-control"><p>
+			<input type="text" name="password_hash" placeholder="password" class="form-control"><p>
+			<button type="button" class="btn btn-default signupButton">Login?</button>
+  			<input type="submit" value="Signup" class="btn btn-info">
+		</form>
+	</div>
+
+
+</div>
 
 <!-- new user button takes user to sign up page -->
 <!-- <form action="/user/new" method="get">
@@ -17,24 +53,3 @@
 
 
 <!-- this is supposed to be sign up -->
-<form action ="/users/new" method="get">
-
-  <div class="row">
-    <div class="six columns">
-      <input class="button-primary" type="submit" value="Signup">
-
-</form>
-
-<!-- this is supposed to be login -->
-<form action="/users/<% @user.id %>" method="post">
-
-  <label for="PasswordBox">Username</label>
-  <input class="u-half-width" placeholder="Username" id="exampleMessage">
-
-  <label for="PasswordBox">Password</label>
-  <input class="u-half-width" placeholder="Password" id="exampleMessage">
-  <div>
-    <input class="button-primary" type="submit" value="Submit">
-  </div>
-
-</form>

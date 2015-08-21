@@ -1,14 +1,16 @@
+require 'spec_helper'
+
 describe 'Users' do
 
-  user1 = User.create!(name: 'David Uli',
-                       email: 'mail@daviduli.com',
-                       handle: '#NorCalDavid',
-                       password_hash: ["password_hash", "$2a$10$9dNZbib6VQTXA7xPvoewMOnwHpPZer0ZnSxDQqcKdJx1sk6Pz.gA."])
+  let(user1) { User.create!(name: 'David Uli',
+                            email: 'mail@daviduli.com',
+                            handle: '#NorCalDavid',
+                              password_hash: ["password_hash", "$2a$10$9dNZbib6VQTXA7xPvoewMOnwHpPZer0ZnSxDQqcKdJx1sk6Pz.gA."])}
 
-  user2 = User.create!(name: 'James Bomotti',
-                       email: 'test@thisserver.com',
-                       handle: '#JBomotti',
-                       password_hash: ["password_hash", "$2a$10$S0fnTfu3cLc1G7V5dMI/8uAzeLnxM5I5diiKT4T3EUMnAKpUcJICK"])
+  let(user2) { User.create!(name: 'James Bomotti',
+                            email: 'test@thisserver.com',
+                            handle: '#JBomotti',
+                            password_hash: ["password_hash", "$2a$10$S0fnTfu3cLc1G7V5dMI/8uAzeLnxM5I5diiKT4T3EUMnAKpUcJICK"])}
 
   describe "Follow / Unfollow Users" do
 

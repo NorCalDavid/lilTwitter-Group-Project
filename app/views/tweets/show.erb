@@ -1,4 +1,7 @@
-<% if  @tweet %>
-<%   @tweet.each do |tweet| %>
- <%= tweet %> edit delete
+<% if  @tweets %>
+<%   @tweets.each do |tweet| %>
+ <p><%=tweet.message %></p>
+ <%end %>
 <%end %>
+
+<a href="/users/<%= @user.id %>/tweets/edit">edit</a>

@@ -32,6 +32,7 @@ end
 get '/users/:user_id' do
   @user = User.find(params[:user_id])
   @tweets = Tweet.where(user_id: params[:user_id])
+  @all_tweets = Tweet.pluck(:message)
   erb :'users/show'
 end
 

@@ -41,7 +41,8 @@ end
 post '/users' do
   #if user input = password in db
     @name = params[:name]
-  @user = User.find_by(name: @name)
+    @user_id = params[:id]
+  @user = User.find_by(id: @user_id)
 
   if(@user && @user.password == params[:password_hash])
     auth_login(@user)

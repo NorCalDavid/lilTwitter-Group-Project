@@ -37,7 +37,8 @@ input{
 	padding-bottom: 20px;
 }
 .slogan {
-	color: white;
+	color: #98d4e1;
+	font-weight: bold;
 }
 hr {
     border: none;

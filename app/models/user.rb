@@ -1,8 +1,25 @@
 ###########################################
 ### User Model
 ###########################################
+require 'bcrypt'
 
 class User < ActiveRecord::Base
+
+  include BCrypt
+
+  has_many :urls
+
+  validates :name, :presence => true, uniqueness: true
+
+  def password
+    @password ||= Password.new(password_hash)
+  end
+
+  def password=(new_password)
+    @password = Password.create(new_password)
+    self.password_hash = @password
+  end
+
   # Did Not Work # has_many :followers, class_name => 'Follower', :foreign_key => 'user_id'
   # Did Not Work # has_many :following, class_name => 'Follower', :foreign_key => 'follower_id'
   has_many :tweets

@@ -16,16 +16,25 @@
 
 
 
+<!-- this is supposed to be sign up -->
+<form action ="/users/new" method="get">
 
-<form action ="/user/new" method="get">
   <div class="row">
     <div class="six columns">
-      <label for="exampleEmailInput"></label>
-      <input class="u-full-width" type="signup" placeholder="Username" id="exampleEmailInput">
+      <input class="button-primary" type="submit" value="Signup">
+
 </form>
 
-  <form action="user/<% @user.id %>" method="post">
-  <label for="exampleMessage">Username</label>
-  <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
-  <input class="button-primary" type="submit" value="Submit">
+<!-- this is supposed to be login -->
+<form action="/users/<% @user.id %>" method="post">
+
+  <label for="PasswordBox">Username</label>
+  <input class="u-half-width" placeholder="Username" id="exampleMessage">
+
+  <label for="PasswordBox">Password</label>
+  <input class="u-half-width" placeholder="Password" id="exampleMessage">
+  <div>
+    <input class="button-primary" type="submit" value="Submit">
+  </div>
+
 </form>

@@ -28,10 +28,11 @@ User.create!(name: 'James Bomotti',
 end
 
 # Following relationships
-users = User.all
-user  = users.first
-following = users[0]
-followers = users[1]
-following.each { |followed| user.follow(followed) }
-followers.each { |follower| follower.follow(user) }
+# COMMENTED OUT FOR NOW TO TEST SITE - Ben and Brenda
+# users = User.all
+# user  = users.first
+# following = users[0]
+# followers = users[1]
+# following.each { |followed| user.follow(followed) }
+# followers.each { |follower| follower.follow(user) }
 

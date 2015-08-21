@@ -1,22 +1,21 @@
+<div class="editForm">
+  <%if @tweets %>
+  <% @tweets.each do |tweet| %>
+  <!-- Edit form -->
+    <form action="/users/<%= @user.id %>/tweets/<%=tweet.id%>" method="post">
+      <input name="_method" type="hidden" value="PUT">
+      <input type="text" name="message" placeholder=<%= tweet.message %> size="70">
+      <input type="submit" value="edit">
+    </form>
 
-<%if @tweets %>
-<% @tweets.each do |tweet| %>
-<!-- Edit form -->
-  <form action="/users/<%= @user.id %>/tweets/<%=tweet.id%>" method="post">
-  <input name="_method" type="hidden" value="PUT">
-    <input type="text" name="message" placeholder=<%= tweet.message %> size="70">
-    <input type="submit" value="edit">
-  </form>
-
-  <form action="/users/<%= @user.id %>/tweets/<%=tweet.id%>" method="post" class="deleteForm">
+    <form action="/users/<%= @user.id %>/tweets/<%=tweet.id%>" method="post" class="deleteForm">
       <input name="_method" type="hidden" value="DELETE">
       <input type="submit" value="Delete">
-  </form>
-
-   <!--  delete form -->
-
+    </form>
   <% end %>
 <%end %>
+
+</div>
 
 
 

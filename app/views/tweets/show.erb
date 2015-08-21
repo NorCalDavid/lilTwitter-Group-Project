@@ -1,7 +1,9 @@
-<% if  @tweets %>
-<%   @tweets.each do |tweet| %>
- <p><%=tweet.message %></p>
- <%end %>
-<%end %>
+<div class="messageDiv">
+  <% if  @tweets %>
+    <%   @tweets.each do |tweet| %>
+      <p><div class="messageBox"><%=tweet.message %></div></p>
+    <%end %>
+  <%end %>
+</div>
 
-<a href="/users/<%= @user.id %>/tweets/edit">edit</a>
+

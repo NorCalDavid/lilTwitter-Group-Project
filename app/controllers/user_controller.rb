@@ -4,7 +4,7 @@
 
 get '/' do
   # for signup or login
-  @user = User.new
+  # @user = User.new
   erb :index
 end
 
@@ -18,8 +18,6 @@ post '/users/new' do
   @user.name = params[:name]
   @user.password = params[:password_hash]
 
-  p "*"*100
-p params
   if @user.save
     #helper method
     auth_login(@user)

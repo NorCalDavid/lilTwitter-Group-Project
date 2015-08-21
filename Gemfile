@@ -17,11 +17,9 @@ gem 'activerecord', '~>4.2.0'
 gem 'rake'
 
 gem 'shotgun'
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 gem 'better_errors'
 gem 'faker'
-
-gem 'eventmachine'
 
 group :test do
   gem 'shoulda-matchers'

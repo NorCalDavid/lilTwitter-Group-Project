@@ -18,10 +18,10 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'bcrypt-ruby'
-gem 'better_errors'
-gem 'faker'
-
-gem 'eventmachine'
+# gem 'better_errors'
+# gem 'faker'
+# gem 'nokogiri'
+# gem 'eventmachine'
 
 group :test do
   gem 'shoulda-matchers'

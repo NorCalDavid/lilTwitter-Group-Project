@@ -16,15 +16,12 @@ post '/users/:user_id/tweets/new' do
   redirect "/users/#{@user.id}/tweets/#{@tweet.id}/edit"
 end
 
-
 get '/users/:user_id/tweets/show' do
 
   @tweets = Tweet.where(user_id: params[:user_id])
 
   erb :"tweets/show"
 end
-
-
 
 get '/users/:user_id/tweets/:tweet_id/edit' do
    # @user = User.find(params[:user_id])

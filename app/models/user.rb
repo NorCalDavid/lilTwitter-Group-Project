@@ -21,10 +21,6 @@ class User < ActiveRecord::Base
     self.password_hash = @password
   end
 
-  # Did Not Work # has_many :followers, class_name => 'Follower', :foreign_key => 'user_id'
-  # Did Not Work # has_many :following, class_name => 'Follower', :foreign_key => 'follower_id'
-  has_many :tweets
-
   ### Following Relationships
   ###########################################
 
